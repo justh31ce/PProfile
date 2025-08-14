@@ -1,0 +1,123 @@
+ :root {
+      --bg-color: #f5f7fa;
+      --text-color: #333;
+      --header-bg: #4a90e2;
+      --footer-bg: #333;
+      --link-color: #0077b5;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f5f5f5;
+      --header-bg: #2c3e50;
+      --footer-bg: #111;
+      --link-color: #4aa3df;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      margin: 0;
+      padding: 0;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 50px;
+      background-color: var(--header-bg);
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: right;
+    }
+
+    .toggle-container {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #0077b5;
+      color: white;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    section:nth-child(even) {
+      animation-delay: 0.5s;
+    }
+
+    section:nth-child(odd) {
+      animation-delay: 1s;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: var(--text-color);
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--footer-bg);
+      color: white;
+      margin-top: 40px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
