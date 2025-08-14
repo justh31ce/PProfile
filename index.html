@@ -2,94 +2,240 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sibusiso | Portfolio</title>
-  
-<link rel="stylesheet" href="index.css">
+  <meta name="description" content="Sibusiso — Driven | Creative | Always Growing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
-    <!-- Profile Picture -->
-    <img src="IMG_20240516_112602_3.jpg" alt="Sibusiso Profile" class="profile-pic" zoom="65" />
-
-    <!-- Name and Tagline -->
-    <div class="header-text">
-      <h1>Sibusiso 👋</h1>
-      <p>Driven | Creative | Always Growing</p>
+    <div class="container nav">
+      <div class="brand">
+        <!-- Replace src with your profile image -->
+        <img src="profile.jpg" alt="Sibusiso Profile" class="logo" />
+        <div class="name">Sibusiso</div>
+      </div>
+      <nav class="links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#brand">AIRYDEC</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div style="display:flex; gap:.5rem; align-items:center">
+        <button class="btn ghost toggle" id="modeToggle" aria-label="Toggle light/dark">🌗</button>
+        <button class="hamburger" id="menuBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+    <div class="container mobile" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#brand">AIRYDEC</a>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
-  <div class="toggle-container">
-    <button class="toggle-btn" onclick="toggleMode()">Toggle Light/Dark Mode</button>
-  </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container grid">
+        <div>
+          <div class="kicker">Hello World! I'm</div>
+          <h1>Sibusiso — Driven • Creative • Always Growing</h1>
+          <div class="badges">
+            <span class="badge">Software Developer</span>
+            <span class="badge">Problem Solver</span>
+            <span class="badge">Community Builder</span>
+            <span class="badge">Based in South Africa</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="#about">Learn More</a>
+            <a class="btn ghost" href="#contact">Get In Touch</a>
+          </div>
+        </div>
+        <div>
+          <!-- Replace with your real image -->
+          <img class="portrait" src="cover.jpg" alt="Sibusiso" />
+        </div>
+      </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a dedicated and self-motivated software developer passionate about solving problems through code and innovation. I believe in continuous learning, staying adaptable, and building meaningful connections with people in all industries.</p>
-    <p>Whether it's technology, business, or fashion, I'm always willing to grow, share knowledge, and collaborate with others.</p>
-  </section>
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a dedicated and self-motivated software developer passionate about solving problems through code and innovation. I believe in continuous learning, staying adaptable, and building meaningful connections with people in all industries.
+        </p>
+        <p>
+          Whether it's technology, business, or fashion, I'm always willing to grow, share knowledge, and collaborate with others.
+        </p>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C#</li>
-      <li>WindowsForm Application </li>
-      <li>Java</li>
-      <li>Web Development (HTML, CSS, JavaScript)</li>
-      <li>SQL(MS Access, MySQL)</li>
-      <li>Visual Studio, GitHub, Eclipse</li>
-    </ul>
-  </section>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <h2>Skills I'm Growing</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Programming & Web</h3>
+            <ul class="list">
+              <li>C# &amp; Java</li>
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>Windows Forms Applications</li>
+              <li>SQL (MS Access, MySQL)</li>
+              <li>ASP.NET (learning)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Cybersecurity & Networking</h3>
+            <ul class="list">
+              <li>Basics of IP Addressing & Subnetting</li>
+              <li>Troubleshooting & LAN Management</li>
+              <li>Wireshark, OWASP ZAP (familiar)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tools</h3>
+            <ul class="list">
+              <li>Visual Studio &amp; VS Code</li>
+              <li>GitHub</li>
+              <li>Unity (starter)</li>
+              <li>VirtualBox / Hyper‑V</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="courses">
-    <h2>Education</h2>
-    <ul>
-      <li>Systems Development Fundamentals</li>
-      <li>Web Technologies</li>
-      <li>Database Systems</li>
-      <li>Networking & Security</li>
-    </ul>
-  </section>
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Systems Development Fundamentals</h3>
+            <ul class="list">
+              <li>Programming &amp; Web Technologies</li>
+              <li>Database Systems</li>
+              <li>Networking &amp; Security</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Current Learning Focus</h3>
+            <ul class="list">
+              <li>SDLC &amp; Agile Methods</li>
+              <li>Server Management &amp; Virtualization</li>
+              <li>Foundations in Cybersecurity</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Workplace Essentials</h3>
+            <ul class="list">
+              <li>Work Ethics &amp; Team Collaboration</li>
+              <li>Communication &amp; Administration</li>
+              <li>Health &amp; Safety</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>My Projects</h2>
-    <ul>
-      <li><strong>Hotel Management System</strong> – Built using C# Console App</li>
-      <li><strong>Department of Home Affairs System</strong> – Console app for managing citizen data</li>
-      <li><strong>Ping Pong Game</strong> – Built using C# WindowsForm application</li>
-      <li><strong>Car Dealership Webpage</strong>– Used Visual Studio Code (HTML,CSS)</li>
-       <li><strong>AIRYDEC_Clothing Webpage</strong>– Used Visual Studio Code (HTML,CSS)</li>
-    </ul>
-  </section>
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="cards">
+          <article class="project">
+            <h3>Hotel Management System</h3>
+            <p class="stack">C# (Console App)</p>
+            <p>Console-based system with room booking and customer records.</p>
+          </article>
+          <article class="project">
+            <h3>Department of Home Affairs System</h3>
+            <p class="stack">C# (Console App)</p>
+            <p>Manage citizen data with simple CRUD operations.</p>
+          </article>
+          <article class="project">
+            <h3>Ping Pong Game</h3>
+            <p class="stack">C# (Windows Forms)</p>
+            <p>Classic paddle game with keyboard controls and scoring.</p>
+          </article>
+          <article class="project">
+            <h3>Car Dealership Webpage</h3>
+            <p class="stack">HTML • CSS</p>
+          </article>
+          <article class="project">
+            <h3>AIRYDEC Clothing Webpage</h3>
+            <p class="stack">HTML • CSS</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="brand">
-    <h2>My Clothing Brand – AIRYDEC 👕</h2>
-    <p>AIRYDEC is my creative clothing brand that blends bold design, cultural pride, and street fashion. It represents a movement of fresh style, confidence, and originality. Follow the journey on social media or reach out for collaborations!</p>
-  </section>
+    <!-- AIRYDEC Brand Highlight -->
+    <section id="brand">
+      <div class="container brand-banner">
+        <h2>My Clothing Brand — AIRYDEC</h2>
+        <p>
+          AIRYDEC blends bold design, cultural pride, and street fashion. It represents a movement of fresh style, confidence, and originality. Follow the journey on social media or reach out for collaborations!
+        </p>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="siyabongasibuyi52@gmail.com">siyabongasibuyi52@gmail.com</a></p>
-    <p>Phone: <a href="https://wa.me/27670535880" target="_blank">+27 67 053 5880 (WhatsApp)</a></p>
-  </section>
-
-  <section id="links">
-    <h2>Find Me Online</h2>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/yourgithub" target="_blank">GitHub</a></li>
-      <li><a href="https://www.instagram.com/airydec" target="_blank">Instagram (AIRYDEC)</a></li>
-      <li><a href="https://www.facebook.com/Justheice03" target="_blank">Facebook (AIRYDEC)</a></li>
-    </ul>
-  </section>
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="card">
+              <p><strong>Email:</strong> <a href="mailto:siyabongasibuyi52@gmail.com">siyabongasibuyi52@gmail.com</a></p>
+              <p><strong>WhatsApp:</strong> <a target="_blank" rel="noopener" href="https://wa.me/27670535880">+27 67 053 5880</a></p>
+              <p><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com">View Profile</a></p>
+              <p><strong>GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/justh31ce">@justh31ce</a></p>
+              <div class="sep"></div>
+              <div class="contact-actions">
+                <a class="btn primary" href="mailto:siyabongasibuyi52@gmail.com?subject=Hello%20Sibusiso">Email Me</a>
+                <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/27670535880">WhatsApp Me</a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form action="mailto:siyabongasibuyi52@gmail.com" method="post" enctype="text/plain" class="card">
+              <div class="row">
+                <input required placeholder="Your Name" name="name" />
+                <input required type="email" placeholder="Email" name="email" />
+              </div>
+              <div class="row" style="grid-template-columns:1fr">
+                <input placeholder="Subject" name="subject" />
+              </div>
+              <div class="row" style="grid-template-columns:1fr">
+                <textarea required placeholder="Message" name="message"></textarea>
+              </div>
+              <button class="btn primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Sibusiso. Built with passion, code & creativity.</p>
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap">
+        <div>© <span id="year"></span> Sibusiso. Built with passion, code & creativity.</div>
+        <div>
+          <a href="https://github.com/justh31ce/PProfile" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- JavaScript for Light/Dark Mode -->
-  <script src="index.js"></script>
-</body>
-</html>
 
