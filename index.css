@@ -1,9 +1,8 @@
 /* Light Theme */
 :root {
   --bg: #ffffff;
-  --text: #222;
-  --section: #f9f9f9;
-  --card: #ffffff;
+  --text: #000000;
+  --card-bg: #f7f7f7;
   --highlight: #0077ff;
 }
 
@@ -11,60 +10,25 @@
 body.dark {
   --bg: #0d1b2a;
   --text: #e0e1dd;
-  --section: #1b263b;
-  --card: #1e2d3d;
+  --card-bg: #1b263b;
   --highlight: #00aaff;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   transition: background 0.3s, color 0.3s;
-  line-height: 1.6;
-  scroll-behavior: smooth;
+  text-align: center;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--section);
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.nav-links ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: var(--highlight);
-}
-
-/* Theme Toggle */
+/* Toggle */
 .theme-toggle {
-  margin-left: 1rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 .theme-toggle input {
   display: none;
@@ -96,76 +60,48 @@ body {
   transform: translateX(20px);
 }
 
-/* Sections */
-.section {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-.section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--highlight);
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding-top: 6rem;
+/* Profile Section */
+.profile {
+  padding: 60px 20px 30px;
 }
 .profile-pic {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  object-fit: cover;
   border: 4px solid var(--highlight);
+  object-fit: cover;
   margin-bottom: 1rem;
 }
-.highlight {
+
+/* Sections */
+section {
+  padding: 40px 20px;
+}
+section h2 {
+  margin-bottom: 1rem;
   color: var(--highlight);
 }
 
-/* Skills */
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-.skill-card {
-  background: var(--card);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Education */
-.edu-list {
+/* Lists */
+ul {
   list-style: none;
   padding: 0;
 }
-.edu-list li {
-  background: var(--card);
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+ul li {
+  margin: 8px 0;
 }
 
-/* Projects */
-.project-card {
-  background: var(--card);
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* Divider */
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--section);
+  padding: 20px;
   font-size: 0.9rem;
+  background: var(--card-bg);
 }
-
 
