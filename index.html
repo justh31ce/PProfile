@@ -2,243 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sibusiso | Portfolio</title>
-  <meta name="description" content="Sibusiso — Driven | Creative | Always Growing" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sibusiso — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Dark/Light Toggle -->
+  <nav>
+    <div class="toggle">
+      <input type="checkbox" id="theme" />
+      <label for="theme"></label>
+      <div class="icon">🌞/🌙</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
   <header>
-    <div class="container nav">
-      <div class="brand">
-      
-        <img src="IMG_20240516_112602_3.jpg" alt="Sibusiso Profile" class="logo" />
-        <div class="name">Sibusiso</div>
-      </div>
-      <nav class="links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#brand">AIRYDEC</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div style="display:flex; gap:.5rem; align-items:center">
-        <button class="btn ghost toggle" id="modeToggle" aria-label="Toggle light/dark">🌗</button>
-        <button class="hamburger" id="menuBtn" aria-label="Menu">☰</button>
-      </div>
-    </div>
-    <div class="container mobile" id="mobileMenu">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#brand">AIRYDEC</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <h1>Hi, I'm Sibusiso</h1>
+    <p>Software Developer | Problem Solver | Creator of AIRYDEC</p>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container grid">
-        <div>
-          <div class="kicker">Hello World! I'm</div>
-          <h1>Sibusiso — Driven • Creative • Always Growing</h1>
-          <div class="badges">
-            <span class="badge">Software Developer</span>
-            <span class="badge">Problem Solver</span>
-            <span class="badge">Community Builder</span>
-            <span class="badge">Based in katlehong</span>
-          </div>
-          <div class="cta">
-            <a class="btn primary" href="#about">Learn More</a>
-            <a class="btn ghost" href="#contact">Get In Touch</a>
-          </div>
-        </div>
-        <div>
-          
-          <img class="portrait" src="IMG_20240516_112602_3.jpg" alt="Sibusiso" />
-        </div>
-      </div>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate developer from South Africa. I enjoy building console apps,
+      websites, and even games. Beyond coding, I also run a clothing brand
+      <strong>AIRYDEC</strong>, blending creativity with technology.
+    </p>
+  </section>
 
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I am a dedicated and self-motivated software developer passionate about solving problems through code and innovation. I believe in continuous learning, staying adaptable, and building meaningful connections with people in all industries.
-        </p>
-        <p>
-          Whether it's technology, business, or fashion, I'm always willing to grow, share knowledge, and collaborate with others.
-        </p>
-      </div>
-    </section>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Proficient:</strong> C#, HTML, CSS, Git</p>
+    <p><strong>Learning:</strong> JavaScript, React, SQL</p>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills">
-      <div class="container">
-        <h2>Skills I'm Growing</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Programming & Web</h3>
-            <ul class="list">
-              <li>C# &amp; Java</li>
-              <li>HTML5, CSS3, JavaScript</li>
-              <li>Windows Forms Applications</li>
-              <li>SQL (MS Access, MySQL)</li>
-              <li>ASP.NET (learning)</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Cybersecurity & Networking</h3>
-            <ul class="list">
-              <li>Basics of IP Addressing & Subnetting</li>
-              <li>Troubleshooting & LAN Management</li>
-              <li>Wireshark, OWASP ZAP (familiar)</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Tools</h3>
-            <ul class="list">
-              <li>Visual Studio &amp; VS Code</li>
-              <li>GitHub</li>
-              <li>Unity (starter)</li>
-              <li>VirtualBox / Hyper‑V</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Systems Development Fundamentals</h3>
-            <ul class="list">
-              <li>Programming &amp; Web Technologies</li>
-              <li>Database Systems</li>
-              <li>Networking &amp; Security</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Current Learning Focus</h3>
-            <ul class="list">
-              <li>SDLC &amp; Agile Methods</li>
-              <li>Server Management &amp; Virtualization</li>
-              <li>Foundations in Cybersecurity</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Workplace Essentials</h3>
-            <ul class="list">
-              <li>Work Ethics &amp; Team Collaboration</li>
-              <li>Communication &amp; Administration</li>
-              <li>Health &amp; Safety</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>My Projects</h2>
-        <div class="cards">
-          <article class="project">
-            <h3>Hotel Management System</h3>
-            <p class="stack">C# (Console App)</p>
-            <p>Console-based system with room booking and customer records.</p>
-          </article>
-          <article class="project">
-            <h3>Department of Home Affairs System</h3>
-            <p class="stack">C# (Console App)</p>
-            <p>Manage citizen data with simple CRUD operations.</p>
-          </article>
-          <article class="project">
-            <h3>Ping Pong Game</h3>
-            <p class="stack">C# (Windows Forms)</p>
-            <p>Classic paddle game with keyboard controls and scoring.</p>
-          </article>
-          <article class="project">
-            <h3>Car Dealership Webpage</h3>
-            <p class="stack">HTML • CSS</p>
-          </article>
-          <article class="project">
-            <h3>AIRYDEC Clothing Webpage</h3>
-            <p class="stack">HTML • CSS</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- AIRYDEC Brand Highlight -->
-    <section id="brand">
-      <div class="container brand-banner">
-        <h2>My Clothing Brand — AIRYDEC</h2>
-        <p>
-          AIRYDEC blends bold design, cultural pride, and street fashion. It represents a movement of fresh style, confidence, and originality. Follow the journey on social media or reach out for collaborations!
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2>Let's Connect</h2>
-        <div class="contact-grid">
-          <div>
-            <div class="card">
-              <p><strong>Email:</strong> <a href="mailto:siyabongasibuyi52@gmail.com">siyabongasibuyi52@gmail.com</a></p>
-              <p><strong>WhatsApp:</strong> <a target="_blank" rel="noopener" href="https://wa.me/27670535880">+27 67 053 5880</a></p>
-              <p><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com">View Profile</a></p>
-              <p><strong>GitHub:</strong> <a target="_blank" rel="noopener" href="https://github.com/justh31ce">@justh31ce</a></p>
-              <div class="sep"></div>
-              <div class="contact-actions">
-                <a class="btn primary" href="mailto:siyabongasibuyi52@gmail.com?subject=Hello%20Sibusiso">Email Me</a>
-                <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/27670535880">WhatsApp Me</a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <form action="mailto:siyabongasibuyi52@gmail.com" method="post" enctype="text/plain" class="card">
-              <div class="row">
-                <input required placeholder="Your Name" name="name" />
-                <input required type="email" placeholder="Email" name="email" />
-              </div>
-              <div class="row" style="grid-template-columns:1fr">
-                <input placeholder="Subject" name="subject" />
-              </div>
-              <div class="row" style="grid-template-columns:1fr">
-                <textarea required placeholder="Message" name="message"></textarea>
-              </div>
-              <button class="btn primary" type="submit">Send</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap">
-        <div>© <span id="year"></span> Sibusiso. Built with passion, code & creativity.</div>
-        <div>
-          <a href="https://github.com/justh31ce/PProfile" target="_blank" rel="noopener">Source</a>
-        </div>
-      </div>
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>NQF Level 5 IT Systems Development</h3>
+      <p>Studied C#, software development, and database fundamentals.</p>
     </div>
+    <div class="card">
+      <h3>Self Learning & Certifications</h3>
+      <p>Improving in web dev, React, SQL, and game development.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <img src="img/project1.png" alt="Hotel Management System Screenshot">
+      <h3>Hotel Management System</h3>
+      <p>A C# Console App to manage hotel bookings, rooms, and customer data.</p>
+      <a href="#">View Code</a>
+    </div>
+
+    <div class="card">
+      <img src="img/project2.png" alt="Home Affairs Management Screenshot">
+      <h3>Home Affairs Management</h3>
+      <p>A C# Console App simulating South African ID & Passport services.</p>
+      <a href="#">View Code</a>
+    </div>
+
+    <div class="card">
+      <img src="img/project3.png" alt="AIRYDEC Clothing Screenshot">
+      <h3>AIRYDEC Clothing Website</h3>
+      <p>A clothing brand e-commerce site showcasing hoodies, t-shirts, long sleeves, and bucket hats.</p>
+      <a href="#">Visit Site</a>
+    </div>
+
+    <div class="card">
+      <img src="img/project4.png" alt="African Soccer Game Screenshot">
+      <h3>African Soccer Game</h3>
+      <p>A football game project built for PC & Mobile using Visual Studio.</p>
+      <a href="#">View Code</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      📧 <a href="mailto:yourmail@example.com">Email</a> | 
+      💻 <a href="https://github.com/yourgithub">GitHub</a> | 
+      🔗 <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a> | 
+      📱 <a href="https://wa.me/27xxxxxxxxx">WhatsApp</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sibusiso. Built with ❤️ and code.</p>
   </footer>
-  <script src="index.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
