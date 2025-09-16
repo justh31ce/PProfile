@@ -1,114 +1,171 @@
-/* Light mode (sky blue gradient) */
+/* Light Theme */
 :root {
-  --bg: linear-gradient(180deg, #87CEEB, #ffffff);
+  --bg: #ffffff;
   --text: #222;
-  --section: rgba(255, 255, 255, 0.9);
-  --card-bg: #ffffff;
+  --section: #f9f9f9;
+  --card: #ffffff;
+  --highlight: #0077ff;
 }
 
-/* Dark mode (sea blue gradient) */
+/* Dark Theme */
 body.dark {
-  --bg: linear-gradient(180deg, #001f3f, #000000);
-  --text: #f1f1f1;
-  --section: rgba(0, 0, 0, 0.8);
-  --card-bg: #0d1b2a;
+  --bg: #0d1b2a;
+  --text: #e0e1dd;
+  --section: #1b263b;
+  --card: #1e2d3d;
+  --highlight: #00aaff;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.5s, color 0.5s;
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 /* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--section);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0.7rem 1rem;
+  background: var(--section);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
+
 .logo {
-  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
-.nav-links {
+
+.nav-links ul {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   margin: 0;
+  padding: 0;
 }
+
 .nav-links a {
   text-decoration: none;
   color: var(--text);
   font-weight: bold;
-  transition: color 0.3s;
 }
+
 .nav-links a:hover {
-  color: #0077ff;
+  color: var(--highlight);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  margin-left: 1rem;
+}
+.theme-toggle input {
+  display: none;
+}
+.theme-toggle label {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.theme-toggle label::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+.theme-toggle input:checked + label {
+  background: var(--highlight);
+}
+.theme-toggle input:checked + label::after {
+  transform: translateX(20px);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--highlight);
 }
 
 /* Hero */
 .hero {
   text-align: center;
-  padding: 8rem 1rem 4rem;
+  padding-top: 6rem;
 }
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 4px solid #0077ff;
   object-fit: cover;
+  border: 4px solid var(--highlight);
   margin-bottom: 1rem;
-  transition: transform 0.3s;
 }
-.profile-pic:hover {
-  transform: scale(1.05);
-}
-
-/* Sections */
-section {
-  padding: 5rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-}
-section h2 {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 2.2rem;
+.highlight {
+  color: var(--highlight);
 }
 
-/* Cards */
-.card {
-  background: var(--card-bg);
-  padding: 1.5rem;
+/* Skills */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.skill-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Education */
+.edu-list {
+  list-style: none;
+  padding: 0;
+}
+.edu-list li {
+  background: var(--card);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Projects */
+.project-card {
+  background: var(--card);
+  padding: 1rem;
   margin: 1rem 0;
-  border-radius: 12px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s, background 0.5s;
-}
-.card:hover {
-  transform: translateY(-7px);
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   background: var(--section);
-  margin-top: 2rem;
+  font-size: 0.9rem;
 }
-
 
 
