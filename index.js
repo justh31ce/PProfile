@@ -1,4 +1,4 @@
-    const themeToggle = document.getElementById('theme');
+const themeToggle = document.getElementById('theme');
 const body = document.body;
 
 // Load saved theme
