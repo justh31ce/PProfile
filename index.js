@@ -11,3 +11,4 @@ themeToggle.addEventListener("change", () => {
   body.classList.toggle("dark", themeToggle.checked);
   localStorage.setItem("dark", themeToggle.checked);
 });
+
