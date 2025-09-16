@@ -1,3 +1,4 @@
+// Theme toggle
 const themeToggle = document.getElementById('theme');
 const body = document.body;
 
@@ -10,4 +11,10 @@ if (localStorage.getItem('dark') === 'true') {
 themeToggle.addEventListener('change', () => {
   body.classList.toggle('dark', themeToggle.checked);
   localStorage.setItem('dark', themeToggle.checked);
+});
+
+// Initialize AOS animations
+AOS.init({
+  duration: 1000,
+  once: true
 });
