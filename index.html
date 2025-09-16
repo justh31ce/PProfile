@@ -1,124 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sibusiso — Portfolio</title>
-  <link rel="stylesheet" href="index.css">
-  <!-- AOS Animate on Scroll CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sibusiso Shembe | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <h2 class="logo">Sibusiso</h2>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+  <header class="navbar">
+    <div class="logo">Sibusiso Shembe</div>
+    <nav class="nav-links">
+      <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="toggle">
-        <input type="checkbox" id="theme" />
-        <label for="theme"></label>
-      </div>
+    </nav>
+    <div class="theme-toggle">
+      <input type="checkbox" id="theme">
+      <label for="theme"></label>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header id="home" class="hero">
-    <img src="img/profile.jpg" alt="Profile Picture" class="profile-pic" data-aos="zoom-in">
-    <h1 data-aos="fade-up">Sibusiso</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Software Developer | Problem Solver | Founder of AIRYDEC</p>
   </header>
 
-  <!-- About -->
-  <section id="about" data-aos="fade-right">
-    <h2>About Me</h2>
-    <p>
-      I'm a passionate developer from South Africa. I enjoy building console apps,
-      websites, and management systems. I also run a clothing brand
-      <strong>AIRYDEC</strong>, combining creativity with technology.
-    </p>
+  <!-- Hero Section -->
+  <section id="about" class="hero section">
+    <img src="img/profile.jpg" alt="Profile Picture" class="profile-pic">
+    <h1>Hello, I’m <span class="highlight">Sibusiso Shembe</span></h1>
+    <p>Aspiring Developer | Cybersecurity Enthusiast | Systems Development Student</p>
+    <p>📍 Based in South Africa</p>
   </section>
 
   <!-- Skills -->
-  <section id="skills" data-aos="fade-left">
+  <section id="skills" class="section">
     <h2>Skills</h2>
-    <p><strong>Proficient:</strong> C#, HTML, CSS, Git</p>
-    <p><strong>Learning:</strong> JavaScript, React, SQL</p>
+    <div class="skills-list">
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>C#, HTML, CSS</p>
+        <p>Learning: JavaScript, React, SQL</p>
+      </div>
+      <div class="skill-card">
+        <h3>IT & Networking</h3>
+        <p>Networking Fundamentals, Hyper-V, Virtual Machines</p>
+      </div>
+      <div class="skill-card">
+        <h3>Cybersecurity</h3>
+        <p>Security basics, system protection, ethical awareness</p>
+      </div>
+    </div>
   </section>
 
   <!-- Education -->
-  <section id="education">
-    <h2 data-aos="fade-up">Education & Courses</h2>
-    <div class="card" data-aos="flip-left">
-      <h3>SLABS Work Essentials</h3>
-      <p>Workplace readiness and professional development training.</p>
-    </div>
-    <div class="card" data-aos="flip-left">
-      <h3>Systems Development Level 4</h3>
-      <p>Introduction to software development and programming fundamentals.</p>
-    </div>
-    <div class="card" data-aos="flip-left">
-      <h3>Systems Development Level 5</h3>
-      <p>Advanced software development with C#, databases, and problem solving.</p>
-    </div>
-    <div class="card" data-aos="flip-left">
-      <h3>Networking</h3>
-      <p>Practical networking concepts including LAN/WAN, IP addressing, and configuration.</p>
-    </div>
-    <div class="card" data-aos="flip-left">
-      <h3>Hyper-V & Virtual Machines</h3>
-      <p>Setup and management of virtualized environments using Hyper-V.</p>
-    </div>
-    <div class="card" data-aos="flip-left">
-      <h3>Cyber Security</h3>
-      <p>Fundamentals of cybersecurity, threat prevention, and system protection.</p>
-    </div>
+  <section id="education" class="section">
+    <h2>Education & Courses</h2>
+    <ul class="edu-list">
+      <li><strong>SLABS Work Essentials</strong></li>
+      <li><strong>Systems Development Level 4</strong></li>
+      <li><strong>Systems Development Level 5</strong></li>
+      <li><strong>Networking</strong></li>
+      <li><strong>Hyper-V & Virtual Machine</strong></li>
+      <li><strong>Cyber Security</strong></li>
+    </ul>
   </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2 data-aos="fade-up">Projects</h2>
-    <div class="card" data-aos="zoom-in">
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-card">
       <h3>Hotel Management System</h3>
-      <p>A C# Console App to manage hotel bookings, rooms, and customer data.</p>
+      <p>A C# console app for managing hotel bookings, rooms, and customers.</p>
     </div>
-    <div class="card" data-aos="zoom-in">
+    <div class="project-card">
       <h3>Home Affairs Management</h3>
-      <p>A C# Console App simulating South African ID & Passport services.</p>
+      <p>A C# console app simulating South African ID & Passport services.</p>
     </div>
-    <div class="card" data-aos="zoom-in">
+    <div class="project-card">
       <h3>AIRYDEC Clothing Website</h3>
-      <p>A clothing brand e-commerce site showcasing hoodies, t-shirts, long sleeves, and bucket hats.</p>
+      <p>A clothing brand e-commerce site for hoodies, t-shirts, long sleeves, and bucket hats.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>
-      📧 <a href="mailto:yourmail@example.com">Email</a> | 
-      💻 <a href="https://github.com/yourgithub">GitHub</a> | 
-      🔗 <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a> | 
-      📱 <a href="https://wa.me/27xxxxxxxxx">WhatsApp</a>
-    </p>
+    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourgithub">yourgithub</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin">yourlinkedin</a></p>
+    <p>WhatsApp: <a href="https://wa.me/27xxxxxxxxx">Chat with me</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Sibusiso. Built with ❤️ and code.</p>
+    <p>© 2025 Sibusiso Shembe | Built with ❤️ and code</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
