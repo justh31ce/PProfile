@@ -16,6 +16,3 @@ toggleBtn.addEventListener('click', () => {
 
 console.log("Welcome to Sibusiso Sibuyi's portfolio!");
 
-
-
-
