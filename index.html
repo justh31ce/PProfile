@@ -1,73 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sibusiso — Developer & IT Student</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sibusiso Sibuyi | Personal Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="profile-pic"></div>
-    <h1>Sibusiso</h1>
-    <p>Developer • IT Student • Passionate About Technology</p>
-    <div class="social-links">
-      <a href="https://github.com/" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-      <a href="https://wa.me/" target="_blank">WhatsApp</a>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1 class="animated-text">👋 Hello World! I'm Sibusiso Sibuyi</h1>
+    <p>Aspiring Developer | Creative Technologist | Founder of Airydec</p>
+    <p>Based in Brakpan, South Africa</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn">Learn More</a>
+      <a href="#contact" class="btn">Get In Touch</a>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I'm Sibusiso, an aspiring developer and IT systems student from South Africa. I enjoy building software projects and exploring networking concepts as I work towards a career in technology.</p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Sibusiso Sibuyi — a creative technologist blending software development with visual design. I specialize in building digital experiences and fashion-forward branding through my clothing line, <strong>Airydec</strong>.
+    </p>
+  </section>
 
-    <section id="skills" class="skills">
-      <h2>Skills</h2>
-      <span>C#</span>
-      <span>Java</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>SQL</span>
-      <span>Networking</span>
-      <span>Virtualization</span>
-    </section>
+  <section id="education">
+    <h2>Education</h2>
+    <p>Currently studying Software Development since 2022.</p>
+    <ul>
+      <li>Web Development (HTML, CSS, JS)</li>
+      <li>Object-Oriented Programming (Java, C#)</li>
+      <li>Database Management Systems</li>
+      <li>Systems Analysis & Design</li>
+      <li>Software Testing & Debugging</li>
+    </ul>
+    <div class="stats">
+      <div class="stat-box">📚 2+ Years Studying</div>
+      <div class="stat-box">💻 4+ Projects Completed</div>
+      <div class="stat-box">🧠 6+ Skills Growing</div>
+    </div>
+  </section>
 
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Library Management System</h3>
-        <p>C# Windows Forms + MySQL application for managing books, members, and transactions.</p>
-      </div>
-      <div class="project">
-        <h3>ATM Simulation</h3>
-        <p>C# Windows Forms project simulating deposits, withdrawals, and transaction history.</p>
-      </div>
-      <div class="project">
-        <h3>Virtual Lab Setup</h3>
-        <p>Configured VirtualBox with Windows Server 2022, Active Directory, and DHCP.</p>
-      </div>
-    </section>
+  <section id="skills">
+    <h2>Skills I'm Growing</h2>
+    <div class="skills-grid">
+      <div><strong>Programming & Web</strong><br>HTML, CSS, JS, React, SQL</div>
+      <div><strong>Design & Branding</strong><br>Photoshop, Illustrator, Apparel Mockups</div>
+      <div><strong>Tools & Tech</strong><br>GitHub, VS Code, Hyper-V, Unity</div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form onsubmit="event.preventDefault(); showAlert();">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Home Affairs Management System</strong></li>
+      <li><strong>Ping Pong Game</strong></li>
+      <li><strong>Hotel Management System</strong></li>
+      <li><strong>Airydec Clothing Website</strong></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:sibusiso.sibuyi@example.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="text" name="Subject" placeholder="Subject" required />
+      <textarea name="Message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <a class="call-button" href="tel:+27712345678">📞 Call Me: +27 71 234 5678</a>
+  </section>
 
   <footer>
-    © <span id="year"></span> Sibusiso — All Rights Reserved
+    <p>© 2025 Sibusiso Sibuyi</p>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 
