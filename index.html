@@ -1,97 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sibusiso Sibuyi | Portfolio</title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sibusiso — Developer & IT Student</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Toggle -->
-  <div class="theme-toggle">
-    <input type="checkbox" id="theme">
-    <label for="theme"></label>
-  </div>
+  <header>
+    <h1>Sibusiso</h1>
+    <p>Developer • IT Student • Passionate About Technology</p>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">WhatsApp</a>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Profile Card -->
-  <section class="profile">
-    <img src="img/profile.jpg" alt="Profile Picture" class="profile-pic">
-    <h1>Sibusiso Sibuyi</h1>
-    <p>Aspiring Developer | Cybersecurity Enthusiast</p>
-    <p>📍 South Africa</p>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm Sibusiso, an aspiring developer and IT systems student from South Africa. I enjoy building software projects and exploring networking concepts as I work towards a career in technology.</p>
+    </section>
 
-  <hr>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <span>C#</span>
+      <span>Java</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>SQL</span>
+      <span>Networking</span>
+      <span>Virtualization</span>
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m passionate about software development, cybersecurity, and IT systems.
-      I enjoy building management systems, console applications, and web
-      projects. I also run a clothing brand called <strong>AIRYDEC</strong>.
-    </p>
-  </section>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Library Management System</h3>
+        <p>C# Windows Forms + MySQL application for managing books, members, and transactions.</p>
+      </div>
+      <div class="project">
+        <h3>ATM Simulation</h3>
+        <p>C# Windows Forms project simulating deposits, withdrawals, and transaction history.</p>
+      </div>
+      <div class="project">
+        <h3>Virtual Lab Setup</h3>
+        <p>Configured VirtualBox with Windows Server 2022, Active Directory, and DHCP.</p>
+      </div>
+    </section>
 
-  <hr>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C#, HTML, CSS</li>
-      <li>Learning JavaScript, React, SQL</li>
-      <li>Networking, Hyper-V, Virtual Machines</li>
-      <li>Cybersecurity fundamentals</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <!-- Education -->
-  <section id="education">
-    <h2>Education & Courses</h2>
-    <ul>
-      <li>SLABS Work Essentials</li>
-      <li>Systems Development Level 4</li>
-      <li>Systems Development Level 5</li>
-      <li>Networking</li>
-      <li>Hyper-V & Virtual Machines</li>
-      <li>Cybersecurity</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Hotel Management System (C# Console App)</li>
-      <li>Home Affairs Management (C# Console App)</li>
-      <li>AIRYDEC Clothing Website</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourgithub">yourgithub</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin">yourlinkedin</a></p>
-    <p>WhatsApp: <a href="https://wa.me/27xxxxxxxxx">Chat with me</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form onsubmit="event.preventDefault(); showAlert();">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Sibusiso Shembe</p>
+    © <span id="year"></span> Sibusiso — All Rights Reserved
   </footer>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
