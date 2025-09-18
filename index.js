@@ -7,7 +7,15 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
-console.log("Welcome to Sibusiso Sibuyi's animated portfolio!");
+// Theme toggle
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+});
+
+console.log("Welcome to Sibusiso Sibuyi's portfolio!");
+
 
 
 
