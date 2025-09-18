@@ -1,38 +1,84 @@
-
+/* Reset & Base */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #4b0082, #8a2be2);
-  color: #fff;
+  transition: background 0.3s, color 0.3s;
 }
 
+:root {
+  --bg-color: linear-gradient(to right, #4b0082, #8a2be2);
+  --text-color: #fff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --btn-bg: #fff;
+  --btn-text: #4b0082;
+}
+
+body.light-mode {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #fff;
+  --btn-bg: #4b0082;
+  --btn-text: #fff;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navigation */
 nav {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 1rem;
+  padding: 1rem 2rem;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: bold;
 }
 
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
-  padding: 6rem 2rem 4rem;
+  padding: 8rem 2rem 4rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .animated-text {
@@ -49,39 +95,77 @@ nav a {
   display: inline-block;
   margin: 1rem;
   padding: 0.8rem 1.5rem;
-  background-color: #fff;
-  color: #4b0082;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* Sections */
 section {
   padding: 4rem 2rem;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
-.stats {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
-.stat-box {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  flex: 1;
-  text-align: center;
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
+.bar {
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  background-color: #4b0082;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background-color: #007acc;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  margin: 0.3rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+/* Contact */
 form {
   display: flex;
   flex-direction: column;
@@ -99,8 +183,8 @@ input, textarea {
 
 button {
   padding: 0.8rem;
-  background-color: #fff;
-  color: #4b0082;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -117,6 +201,19 @@ button {
   text-decoration: none;
 }
 
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
