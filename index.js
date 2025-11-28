@@ -1,18 +1,136 @@
-// Smooth scroll for nav links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-  });
+// -----------------------------
+// SMOOTH SCROLL FOR NAV LINKS
+// -----------------------------
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-// Theme toggle
-const toggleBtn = document.getElementById('theme-toggle');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+// -----------------------------
+// ANIMATE SECTIONS ON SCROLL
+// -----------------------------
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
 });
 
-console.log("Welcome to Sibusiso Sibuyi's portfolio!");
+// -----------------------------
+// SKILL PROGRESS BARS ANIMATION
+// -----------------------------
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll('.skill-progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('style').match(/width:\s*(\d+%)/);
+                if (width && width[1]) {
+                    bar.style.width = width[1]; // animate to actual width
+                }
+            });
+        }
+    });
+}, { threshold: 0.5 });
 
+document.querySelectorAll('.skill-category').forEach(category => {
+    skillObserver.observe(category);
+});
+
+// -----------------------------
+// HEADER BACKGROUND ON SCROLL
+// -----------------------------
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+    } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+    }
+});
+
+// -----------------------------
+// MOBILE MENU TOGGLE
+// -----------------------------
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('show');
+});
+
+// -----------------------------
+// EMAILJS CONTACT FORM
+// -----------------------------
+emailjs.init("5tfG93RgjAaO6v_2d"); // Your EmailJS public key
+
+function setupContactForm() {
+    const form = document.getElementById("contact-form");
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const serviceID = "service_xl29bwe";
+            const templateID = "template_xjsk7nn";
+
+            const templateParams = {
+                message: document.getElementById("message").value,
+                from_name: document.getElementById("name").value,
+                reply_to: document.getElementById("email").value,
+            };
+
+            emailjs.send(serviceID, templateID, templateParams)
+                .then(response => {
+                    alert("✅ Email sent successfully!");
+                    console.log("SUCCESS!", response);
+                    form.reset();
+                })
+                .catch(error => {
+                    alert("❌ Failed to send email. Check console for error details.");
+                    console.error("FAILED...", error);
+                });
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", setupContactForm);
+
+// -----------------------------
+// DARK/LIGHT MODE TOGGLE
+// -----------------------------
+function setupDarkMode() {
+    const toggle = document.getElementById('darkToggle');
+    const isDark = localStorage.getItem('dark-mode') === 'true';
+
+    if (isDark) {
+        document.body.classList.add('dark-mode');
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('dark-mode', 'true');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('dark-mode', 'false');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupDarkMode);
