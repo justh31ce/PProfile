@@ -3,404 +3,156 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sibusiso Sibuyi - Developer & Cybersecurity Enthusiast</title>
+    <meta name="theme-color" content="#101a2b" />
+    <meta name="description" content="Sibusiso Sibuyi — aspiring developer with interests in software development, cybersecurity, networking and systems administration." />
+    <title>Sibusiso Sibuyi | Developer & Cybersecurity Enthusiast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="IMG_20240516_112602_3.jpg" alt="Sibusiso Sibuyi" class="logo-img" />
-                <span>Sibusiso Sibuyi</span>
-            </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main navigation">
+            <a class="logo" href="#home" aria-label="Sibusiso Sibuyi home">
+                <img src="IMG_20240516_112602_3.jpg" alt="Portrait of Sibusiso Sibuyi" class="logo-img" />
+                <span>Sibusiso <strong>Sibuyi</strong></span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
             </ul>
-            <div class="dark-mode-toggle">
-                <label class="switch">
-                    <input type="checkbox" id="darkToggle">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+            <label class="theme-control" for="darkToggle" title="Toggle dark mode">
+                <span class="theme-icon" aria-hidden="true">☼</span>
+                <input type="checkbox" id="darkToggle" aria-label="Enable dark mode" />
+                <span class="theme-track"><span></span></span>
+            </label>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>👋 Hello World! I'm Sibusiso Sibuyi</h1>
-            <p class="subtitle">
-                🎓 Aspiring Developer | Future Ethical Hacker | IT Systems Developer | Network & System Administration
-            </p>
-            <p class="location">📍 Based in Katlehong, South Africa</p>
-            <div class="cta-buttons">
-                <a href="#about" class="btn btn-primary">Learn More</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <section class="hero" id="home">
+        <div class="hero-glow hero-glow-one"></div><div class="hero-glow hero-glow-two"></div>
+        <div class="container hero-layout">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> DEVELOPER IN THE MAKING · SOUTH AFRICA</p>
+                <h1>Hello, I'm <span>Sibusiso Sibuyi.</span></h1>
+                <p class="hero-role">Aspiring Developer <span>/</span> Cybersecurity Enthusiast</p>
+                <p class="hero-description">I’m building practical skills across software development, web technologies, networking and systems administration — one project at a time.</p>
+                <p class="location"><span aria-hidden="true">⌖</span> Katlehong, South Africa</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">↗</span></a>
+                    <a href="#contact" class="btn btn-secondary">Get in touch</a>
+                </div>
+                <div class="hero-note"><span class="hero-note-line"></span> Curious by nature. Focused on building useful things.</div>
+            </div>
+            <div class="hero-visual" aria-label="Profile photograph">
+                <div class="portrait-frame"><div class="portrait-accent"></div><img src="IMG_20240516_112602_3.jpg" alt="Sibusiso Sibuyi" class="hero-portrait" /></div>
+                <div class="floating-card"><span class="floating-card-icon">✳</span><span><strong>Always learning</strong><small>Building skills through projects</small></span></div>
+                <div class="visual-index">SS <span>—</span> PORTFOLIO</div>
             </div>
         </div>
+        <div class="hero-bottom-rule"></div>
     </section>
 
     <main>
-        <!-- About Section -->
-        <section id="about" class="animate-on-scroll">
+        <section id="about" class="section animate-on-scroll">
             <div class="container">
-                <h2>🚀 About Me</h2>
+                <div class="section-heading"><p class="section-kicker">A LITTLE ABOUT ME</p><h2>Curiosity into <span>capability.</span></h2><p class="section-intro">A growing foundation in technology, supported by hands-on practice and a willingness to keep learning.</p></div>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>
-                            I'm Sibusiso Sibuyi — a dedicated learner and developer on a
-                            mission to become one of the best in the IT industry. I specialize in
-                            <span class="highlight">Software and Web Development</span>,
-                            with strong interests in
-                            <span class="highlight">Cybersecurity</span> and
-                            <span class="highlight">Network Engineering</span>.
-                        </p>
-                        <p>
-                            I'm continuously building my skills while pursuing formal
-                            education and working on real-world projects. My passion extends
-                            beyond coding to include
-                            <span class="highlight">Business, Economics, and Work Essentials</span>,
-                            applying analytical thinking to IT problem-solving.
-                        </p>
-                        <p>
-                            💻 Passionate about: Software Development • Web Development •
-                            Ethical Hacking • Game Development • Science & Technology
-                        </p>
+                        <p>I'm Sibusiso Sibuyi — a dedicated learner and developer working towards a career in the IT industry. My main focus is <span class="highlight">software and web development</span>, with strong interests in <span class="highlight">cybersecurity</span> and <span class="highlight">network engineering</span>.</p>
+                        <p>I'm continuously developing my skills through formal education and practical projects. My interests also include business, economics and workplace essentials, which help me approach technical challenges with a broader perspective.</p>
+                        <p class="about-passion"><span>Areas I enjoy exploring</span> Software development · Web development · Ethical hacking · Game development · Science and technology</p>
                     </div>
                     <div class="stats">
-                        <div class="stat-card">
-                            <div class="stat-number">2+</div>
-                            <div class="text">Years Studying</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">5+</div>
-                            <div class="text">Programming Languages</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">3+</div>
-                            <div class="text">Active Projects</div>
-                        </div>
+                        <div class="stat-card"><span class="stat-number">2+</span><span class="stat-label">Years studying</span></div>
+                        <div class="stat-card"><span class="stat-number">5+</span><span class="stat-label">Programming languages</span></div>
+                        <div class="stat-card"><span class="stat-number">3+</span><span class="stat-label">Active projects</span></div>
+                        <p class="stats-note">Learning through practice, iteration and collaboration.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills animate-on-scroll">
+        <section id="skills" class="section section-muted animate-on-scroll">
             <div class="container">
-                <h2>🧠 Skills I'm Growing</h2>
+                <div class="section-heading"><p class="section-kicker">WHAT I'M WORKING WITH</p><h2>Skills & <span>toolkit.</span></h2><p class="section-intro">Technologies and tools I’m developing through study and practical work.</p></div>
                 <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>👨‍💻 Programming & Web Development</h3>
-                        <div class="skill-item">
-                            <span>C# & Java</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>HTML5 & CSS3</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>SQL</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>ASP.NET</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>IP Addressing, Subnetting, Troubleshooting</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 80%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-category"><div class="card-number">01</div><h3>Programming & web development</h3>
+                        <div class="skill-item"><div class="skill-label"><span>C# & Java</span><span>85%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="85"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>HTML5 & CSS3</span><span>90%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="90"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>JavaScript</span><span>70%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="70"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>SQL</span><span>80%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="80"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>ASP.NET</span><span>60%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="60"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>IP addressing, subnetting & troubleshooting</span><span>80%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="80"></div></div></div>
                     </div>
-
-                    <div class="skill-category">
-                        <h3>🔐 Cybersecurity</h3>
-                        <div class="skill-item">
-                            <span>Burp Suite</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Wireshark</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>OWASP ZAP</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>ZenMap</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-category"><div class="card-number">02</div><h3>Cybersecurity</h3>
+                        <div class="skill-item"><div class="skill-label"><span>Burp Suite</span><span>75%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="75"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>Wireshark</span><span>70%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="70"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>OWASP ZAP</span><span>65%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="65"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>ZenMap</span><span>70%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="70"></div></div></div>
                     </div>
-
-                    <div class="skill-category">
-                        <h3>⚙️ Tools & Technologies</h3>
-                        <div class="skill-item">
-                            <span>Visual Studio and Visual Studio Code</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>GitHub</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Unity 6</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 65%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Virtual Box and Windows Hyper-V</span>
-                            <div class="skill-progress">
-                                <div class="skill-progress-fill" style="width: 88%"></div>
-                            </div>
-                        </div>
+                    <div class="skill-category"><div class="card-number">03</div><h3>Tools & technologies</h3>
+                        <div class="skill-item"><div class="skill-label"><span>Visual Studio & VS Code</span><span>85%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="85"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>GitHub</span><span>80%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="80"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>Unity 6</span><span>65%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="65"></div></div></div>
+                        <div class="skill-item"><div class="skill-label"><span>VirtualBox & Windows Hyper-V</span><span>88%</span></div><div class="skill-progress"><div class="skill-progress-fill" data-progress="88"></div></div></div>
                     </div>
                 </div>
+                <p class="skills-disclaimer">Skill levels are self-assessments and reflect my current learning progress.</p>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="animate-on-scroll">
+        <section id="education" class="section animate-on-scroll">
             <div class="container">
-                <h2>📘 Current Education</h2>
+                <div class="section-heading"><p class="section-kicker">LEARNING & DEVELOPMENT</p><h2>Education & <span>training.</span></h2><p class="section-intro">The formal learning and workplace foundations supporting my development.</p></div>
                 <div class="education-grid">
-                    <!-- Copy same education cards as Siyabonga -->
-                    <div class="education-card">
-                        <h3>💡 Information Technology</h3>
-                        <div class="institution">Okanagan College (International Program)</div>
-                        <div class="status">🧠 In Progress</div>
-                        <ul class="course-topics">
-                            <li><strong>Core Concepts in Networking:</strong> Subnetting, IP Addressing, Router & Switch Configuration, Ethernet, Security Fundamentals</li>
-                            <li><strong>LAN Management:</strong> Virtualization, Windows Server 2022</li>
-                            <li><strong>Foundations of Practice in Cybersecurity:</strong> Threat Management, Cryptography, Network Security</li>
-                            <li><strong>Server Management:</strong> ADDS, DNS, DHCP, File Management</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-card">
-                        <h3>💻 Systems Development Higher Certificate</h3>
-                        <div class="institution">Greenview College</div>
-                        <div class="status">🧠 In Progress</div>
-                        <ul class="course-topics">
-                            <li>Advanced Programming Concepts</li>
-                            <li>System Design & Analysis</li>
-                            <li>Database Management Systems</li>
-                            <li>SDLC and Agile Methodologies</li>
-                            <li>Web Development</li>
-                            <li>Project Management</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-card">
-                        <h3>💻 Systems Development Certificate</h3>
-                        <div class="institution">Greenview College</div>
-                        <div class="status">🧠 Completed</div>
-                        <ul class="course-topics">
-                            <li>Programming Fundamentals</li>
-                            <li>Introduction to System Design & Analysis</li>
-                            <li>Introduction to Database Management Systems(Microsft Access)</li>
-                            <li>Networking Fundamentals</li>
-                            <li>Introduction to Web Development</li>
-                            <li>Numeracy</li>
-                            <li>Communication</li>
-                            <li>Microsft Suite</li>
-                        </ul>
-                    </div>
-
-                    <div class="education-card">
-                        <h3>💻 Workplace Essentials</h3>
-                        <div class="institution">Southern Labs</div>
-                        <div class="status">🧠 Completed</div>
-                        <ul class="course-topics">
-                            <li>Health and Safety</li>
-                            <li>Work Ethics</li>
-                            <li>Workplace Management</li>
-                            <li>Teamwork and Collaboration</li>
-                            <li>Communication</li>
-                            <li>Office Administration</li>
-                        </ul>
-                    </div>
+                    <article class="education-card"><span class="education-index">01 / IN PROGRESS</span><h3>Information Technology</h3><p class="institution">Okanagan College (International Program)</p><span class="status">Completed</span><ul class="course-topics"><li><strong>Networking:</strong> Subnetting, IP addressing, router and switch configuration, Ethernet, security fundamentals</li><li><strong>LAN management:</strong> Virtualization, Windows Server 2022</li><li><strong>Cybersecurity:</strong> Threat management, cryptography, network security</li><li><strong>Server management:</strong> ADDS, DNS, DHCP, file management</li></ul></article>
+                    <article class="education-card"><span class="education-index">02 / COMPLETED</span><h3>Systems Development Higher Certificate</h3><p class="institution">Greenview College</p><span class="status">In progress</span><ul class="course-topics"><li>Advanced programming concepts</li><li>System design and analysis</li><li>Database management systems</li><li>SDLC and Agile methodologies</li><li>Web development</li><li>Project management</li></ul></article>
+                    <article class="education-card"><span class="education-index">01 / IN PROGRESS</span><h3>Applied Software Development</h3><p class="institution">Mohawk College (International Program)</p><span class="status">In progress</span><ul class="course-topics"><li><strong>Programming:</strong> Python, Java, Html and Intellij, MySQL, Database</li><li><strong>Application management:</strong> VSCode, Visual Studio</li><li><strong>Sofware Dev:</strong> Threat management, APIS, sofware security</li><li><strong>Software management:</strong> APPS, Pycharm, Vscode, project management</li></ul></article>
+                    <article class="education-card"><span class="education-index">03 / COMPLETED</span><h3>Systems Development Certificate</h3><p class="institution">Greenview College</p><span class="status status-complete">Completed</span><ul class="course-topics"><li>Programming fundamentals</li><li>Introduction to system design and analysis</li><li>Introduction to database management systems (Microsoft Access)</li><li>Networking fundamentals</li><li>Introduction to web development</li><li>Numeracy, communication and Microsoft Office</li></ul></article>
+                    <article class="education-card"><span class="education-index">04 / COMPLETED</span><h3>Workplace Essentials</h3><p class="institution">Southern Labs</p><span class="status status-complete">Completed</span><ul class="course-topics"><li>Health and safety</li><li>Work ethics</li><li>Workplace management</li><li>Teamwork and collaboration</li><li>Communication</li><li>Office administration</li></ul></article>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects animate-on-scroll">
+        <section id="projects" class="section section-muted animate-on-scroll">
             <div class="container">
-                <h2>🔥 Current Projects</h2>
+                <div class="section-heading"><p class="section-kicker">SELECTED PRACTICE</p><h2>Projects in <span>progress.</span></h2><p class="section-intro">A selection of projects that help me apply and strengthen my technical skills.</p></div>
                 <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Ping Pong Game</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>A classic Ping Pong game developed with JavaScript and HTML5 Canvas. <b>View Project</b> (link placeholder)</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>ATM System</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>ATM simulation with account management, withdrawals, deposits, and transaction history. <b>View Project</b> (link placeholder)</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">Windows Forms</span>
-                                <span class="tech-tag">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Inventory Management System</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>A system to manage product inventories, track stock levels, and generate reports. <b>View Project</b> (link placeholder)</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Windows Forms</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Home Affairs Management System</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>Software system for managing citizen records and documentation efficiently. <b>View Project</b> (link placeholder)</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Windows Forms</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Airydec Clothing Website</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>E-commerce website for Airydec Clothing. <b>View Project</b> (link placeholder)</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Responsive Design</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3>Biteverse Restaurant Website</h3>
-                        </div>
-                        <div class="project-content">
-                            <p>Restaurant website for Biteverse showcasing menu and services. <b>View Project</b> (link placeholder)</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Responsive Design</span>
-                            </div>
-                        </div>
-                    </div>
+                    <article class="project-card"><div class="project-topline"><span>01</span><span>GAME DEVELOPMENT</span></div><h3>Ping Pong Game</h3><p>A classic Ping Pong game developed with JavaScript and HTML5 Canvas.</p><div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span></div></article>
+                    <article class="project-card"><div class="project-topline"><span>02</span><span>APPLICATION DEVELOPMENT</span></div><h3>ATM System</h3><p>An ATM simulation with account management, withdrawals, deposits and transaction history.</p><div class="project-tech"><span class="tech-tag">C#</span><span class="tech-tag">Windows Forms</span><span class="tech-tag">MySQL</span></div></article>
+                    <article class="project-card"><div class="project-topline"><span>03</span><span>SYSTEMS DEVELOPMENT</span></div><h3>Inventory Management System</h3><p>A system concept for managing product inventory, tracking stock levels and generating reports.</p><div class="project-tech"><span class="tech-tag">C#</span><span class="tech-tag">SQL</span><span class="tech-tag">Windows Forms</span></div></article>
+                    <article class="project-card"><div class="project-topline"><span>04</span><span>SYSTEMS DEVELOPMENT</span></div><h3>Home Affairs Management System</h3><p>A software system concept for managing citizen records and documentation efficiently.</p><div class="project-tech"><span class="tech-tag">C#</span><span class="tech-tag">SQL</span><span class="tech-tag">Windows Forms</span></div></article>
+                    <article class="project-card"><div class="project-topline"><span>05</span><span>WEB DEVELOPMENT</span></div><h3>Airydec Clothing Website</h3><p>An e-commerce website concept for showcasing clothing products and supporting an online shopping experience.</p><div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span></div></article>
+                    <article class="project-card"><div class="project-topline"><span>06</span><span>WEB DEVELOPMENT</span></div><h3>Biteverse Restaurant Website</h3><p>A restaurant website concept showcasing menu items and services with a responsive layout.</p><div class="project-tech"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span></div></article>
                 </div>
+                <p class="project-note">Project descriptions are provided for context; add live project links when they are available.</p>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact animate-on-scroll">
-            <div class="container">
-                <div class="contact-content">
-                    <h2>Let's Connect!</h2>
-                    <form id="contact-form" class="contact-form">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required />
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <button type="submit">Send Email</button>
-                    </form>
-
-                    <p>
-                        I'm always excited to discuss technology, collaborate on projects,
-                        or explore new opportunities. Feel free to reach out!
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:siyabongasibuyi52@gmail.com" class="contact-link">
-                            <span>📧</span>
-                            <span>Email</span>
-                        </a>
-                        <a href="https://wa.me/0670535880" class="contact-link" target="_blank">
-                            <span>💬</span>
-                            <span>WhatsApp</span>
-                        </a>
-                        <a href="tel:+27670535880" class="contact-link">
-                            <span>📱</span>
-                            <span>Call</span>
-                        </a>
-                    </div>
+        <section id="contact" class="section contact-section animate-on-scroll">
+            <div class="container contact-layout">
+                <div class="contact-copy"><p class="section-kicker">HAVE A PROJECT IN MIND?</p><h2>Let's make something <span>meaningful.</span></h2><p>I'm happy to discuss technology, collaborate on projects, or explore opportunities to learn and contribute. Send me a message and let's connect.</p>
+                    <div class="contact-links"><a href="mailto:siyabongasibuyi52@gmail.com" class="contact-link"><span class="contact-link-icon">↗</span><span><small>Email</small><strong>Send me an email</strong></span></a><a href="https://wa.me/27670535880" class="contact-link" target="_blank" rel="noopener noreferrer"><span class="contact-link-icon">↗</span><span><small>WhatsApp</small><strong>Start a conversation</strong></span></a><a href="tel:+27670535880" class="contact-link"><span class="contact-link-icon">↗</span><span><small>Phone</small><strong>Give me a call</strong></span></a></div>
                 </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-heading"><h3>Send a message</h3><p>Fields marked with * are required.</p></div>
+                    <label for="name">Your name <span>*</span></label><input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Thando Mokoena" required />
+                    <label for="email">Email address <span>*</span></label><input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+                    <label for="message">Your message <span>*</span></label><textarea id="message" name="message" rows="5" placeholder="Tell me a little about what you have in mind..." required></textarea>
+                    <button type="submit" class="btn btn-primary submit-btn">Send message <span aria-hidden="true">↗</span></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </section>
     </main>
-
-    <script src="index.js"></script>
+    <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#home">SS<span>.</span></a><p>Designed and built with care by Sibusiso Sibuyi.</p><a href="#home" class="back-to-top">Back to top ↑</a><span class="copyright">© <span id="current-year"></span> Sibusiso Sibuyi</span></div></footer>
 </body>
 </html>
 
